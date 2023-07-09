@@ -66,7 +66,7 @@
     </visual>
     <collision>
       <geometry>
-        <cylinder length="0.04" radius="0.05" />
+        <sphere radius="0.05" />
       </geometry>
       <material name="blue" />
     </collision>
@@ -91,7 +91,7 @@
     </visual>
     <collision>
       <geometry>
-        <cylinder length="0.04" radius="0.05" />
+        <sphere radius="0.05" />
       </geometry>
       <material name="blue" />
     </collision>
