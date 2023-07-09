@@ -1,12 +1,20 @@
 Mobile robot navigation with ROS.
 
-## Start simulator:
+## Start empty simulator:
 
 ros2 launch mobile-robot-navigation launch_sim.launch.py
 
-## Start teleoperation:
+## Start simulator with obstacles:
+
+ros2 launch mobile-robot-navigation launch_sim.launch.py world:=./src/mobile-robot-navigation/worlds/obstacles.world
+
+## Start teleoperation with Gazebo controls:
 
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+## Start teleoperation with ROS2 controls:
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
 
 ## Windows 10 WSL2 Gazebo fix rendering (enable Gazebo CPU rendering):
 
