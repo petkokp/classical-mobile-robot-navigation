@@ -16,6 +16,10 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
 
+## Start slam_toolbox:
+
+ros2 launch slam_toolbox online_async_launch.py params_file:=./src/mobile-robot-navigation/config/mapper_params_online_async.yaml use_sim_time:=true
+
 ## Windows 10 WSL2 Gazebo fix rendering (enable Gazebo CPU rendering):
 
 export GAZEBO_IP=127.0.0.1
